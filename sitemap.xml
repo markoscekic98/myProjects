@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<url>
+  <loc>https://markoanonymityguide.000webhostapp.com/</loc>
+  <changefreq>yearly</changefreq>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://markoanonymityguide.000webhostapp.com/index.html</loc>
+  <changefreq>yearly</changefreq>
+  <priority>1</priority>
+</url>
+<url>
+  <loc>https://markoanonymityguide.000webhostapp.com/privacy.html</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://markoanonymityguide.000webhostapp.com/whistleblowers.html</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://markoanonymityguide.000webhostapp.com/about.html</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://markoanonymityguide.000webhostapp.com/contact.html</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://markoanonymityguide.000webhostapp.com/author.html</loc>
+  <changefreq>yearly</changefreq>
+  <priority>0.90</priority>
+</url>
+</urlset>
