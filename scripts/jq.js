@@ -257,12 +257,12 @@ $(document).ready(function () {
         } //if 
         if (window.location.pathname == '/contact.html' || window.location.pathname == '/Contact.html') {
            // console.log('kontakt');
-
+           
             var randomNum = Math.ceil(Math.random() * 1000);
             document.getElementById('myCaptcha').innerHTML = randomNum;
             console.log(randomNum);
 
-
+           
             document.getElementById("signUp").addEventListener("click", function () {
 
                 var pass = true;
@@ -278,7 +278,7 @@ $(document).ready(function () {
                 var female = document.getElementById('female').value;
                 var male = document.getElementById('female').value;;
                 var offended =document.getElementById('female').value;;
-                
+               
                 var fnameError = document.querySelector("#fnameError");
                 var lnameError = document.querySelector("#lnameError");
                 var mailError = document.querySelector("#emailError");
@@ -377,7 +377,6 @@ $(document).ready(function () {
                         break;
                     }
                 }
-
                 if (chosen) {
                     var sex = document.getElementsByName("sex").innerHTML = "";
                     //data.push(gender.value);
@@ -388,124 +387,32 @@ $(document).ready(function () {
                     $('#genderError')
                     document.getElementById("genderError").innerHTML = "Gender must be chosen";
                 }
-                if (chosen == true && pass == true && captchaValue == randomNum) {
-                   
-                    console.log(data);
+               
                  
-                    alert("Successful Sign up");
-                }
-            //     set_cookie("Date",datum ,"FirstName",data[0],"LastName", data[1],'Mail', data[2], 'Sifra', data[3],'Sex', data[4]);
-            //    document.cookie = `${set_cookie} ;secure`;
-            localStorage.setItem("Date",datum ,"FirstName",data[0],"LastName", data[1],'Mail', data[2], 'Sifra', data[3],'Sex', data[4]);
+                if (chosen == true && pass == true && captchaValue == randomNum) {
+                    let cookiedate = document.cookie =`Date = ${datum}`;
+                    let cookiefname = document.cookie =`First name = ${fname}`;
+                    let cookielname = document.cookie =`Last name = ${lname}`;
+                    let cookieEmail = document.cookie = `Mail = ${mail}`;    let enc = CryptoJS.AES.encrypt(pass, "1.1.1.1").toString();
+                    let cookieSifra = document.cookie = `Sifra = ${enc}`; 
+                    let cookieSex = document.cookie = `Sex = ${data[4]}`;
+                    $.getJSON('https://api.ipify.org?format=jsonp&callback=?', function(data) {
+                        let l =JSON.stringify(data).split(":").l[1].toString();
+                        // let lo = l[1].toString();
+                        // let loLenght = lo.length;
+                        var lokacija =l.slice(1,l.length-2);
+                        let cookieIP = document.cookie = `IpAdresa = ${lokacija}`;
+                     }); 
+                 }
             });
-
-            particlesJS("particles-js", {
-                particles: {
-                    number: {
-                        value: 150,
-                        density: {
-                            enable: true,
-                            value_area: 800
-                        },
-                    },
-                    color: {
-                        value: "#4caf50"
-                    },
-                    shape: {
-                        type: "circle",
-                        stroke: {
-                            width: 1,
-                            color: "#ccc"
-                        },
-                        image: {
-                            src: "http://www.iconsdb.com/icons/preview/white/contacts-xxl.png",
-                            width: 100,
-                            height: 100
-                        }
-                    },
-                    opacity: {
-                        value: 0.5,
-                        random: false,
-                        anim: {
-                            enable: false,
-                            speed: 0.5,
-                            opacity_min: 0.1,
-                            sync: false
-                        }
-                    },
-                    size: {
-                        value: 2,
-                        random: true,
-                        anim: {
-                            enable: false,
-                            speed: 40,
-                            size_min: 0.1,
-                            sync: false
-                        }
-                    },
-                    line_linked: {
-                        enable: true,
-                        distance: 150,
-                        color: "#4caf50",
-                        opacity: 0.4,
-                        width: 1
-                    },
-                    move: {
-                        enable: true,
-                        speed: 2,
-                        direction: "none",
-                        random: false,
-                        straight: false,
-                        out_mode: "out",
-                        bounce: false,
-                        attract: {
-                            enable: false,
-                            rotateX: 600,
-                            rotateY: 1200
-                        }
-                    }
-                },
-                interactivity: {
-                    detect_on: "canvas",
-                    events: {
-                        onhover: {
-                            enable: true,
-                            mode: "grab"
-                        },
-                        onclick: {
-                            enable: true,
-                            mode: "push"
-                        },
-                        resize: true
-                    },
-                    modes: {
-                        grab: {
-                            distance: 150,
-                            line_linked: {
-                                opacity: 1
-                            }
-                        },
-                        bubble: {
-                            distance: 400,
-                            size: 40,
-                            duration: 2,
-                            opacity: 8,
-                            speed: 3
-                        },
-                        repulse: {
-                            distance: 200,
-                            duration: 0.4
-                        },
-                        push: {
-                            particles_nb: 4
-                        },
-                        remove: {
-                            particles_nb: 2
-                        }
-                    }
-                },
-                retina_detect: true
-            });
+            particlesJS("particles-js",{particles:{number:{value:150,density:{enable:!0,value_area:800}},color:{value:"#4caf50"},shape:{type:"circle",
+            stroke:{width:1,color:"#ccc"},image:{src:"http://www.iconsdb.com/icons/preview/white/contacts-xxl.png",width:100,height:100}},
+            opacity:{value:.5,random:!1,anim:{enable:!1,speed:.5,opacity_min:.1,sync:!1}},
+            size:{value:2,random:!0,anim:{enable:!1,speed:40,size_min:.1,sync:!1}},line_linked:{enable:!0,distance:150,color:"#4caf50",
+            opacity:.4,width:1},move:{enable:!0,speed:2,direction:"none",random:!1,straight:!1,out_mode:"out",bounce:!1,
+            attract:{enable:!1,rotateX:600,rotateY:1200}}},interactivity:{detect_on:"canvas",events:{onhover:{enable:!0,mode:"grab"},
+            onclick:{enable:!0,mode:"push"},resize:!0},modes:{grab:{distance:150,line_linked:{opacity:1}},bubble:{distance:400,size:40,
+            duration:2,opacity:8,speed:3},repulse:{distance:200,duration:.4},push:{particles_nb:4},remove:{particles_nb:2}}},retina_detect:!0});
         }
         if (window.location.pathname == '/privacy.html' || window.location.pathname == '/Privacy.html') {
             function privacyDynamic() {
@@ -772,21 +679,16 @@ $(document).ready(function () {
             $(".one_third figure img").attr("height", "450");
 
             function ajaxPozivanje() {
+               
                 $.ajax({
                     url: "data/telefoni.json",
                     method: "get",
                     type: "json",
                     success: function (mobilniTelefoni) {
-                        //mobilniTelefoni= mobilniTelefoni.filter(x=> x.price<=250);
-
-                        console.log("Ima ajaxa danas!");
-                        //mobilniTelefoni= mobilniTelefoni.filter(x => x.price <= 200);
                         ispisivanje(mobilniTelefoni);
                         filtCena(mobilniTelefoni);
-                        //malo(mobilniTelefoni);
                         filtBrend(mobilniTelefoni);
-                   
-                    },
+                   },
                     error: function (xhr, error, status) {
                         console.log("Nema ajaxa danas.")
                     }
