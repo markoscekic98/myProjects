@@ -276,8 +276,8 @@ $(document).ready(function () {
                 var captchaValue = document.getElementById('myCaptchaNumber').value.trim();
                 
                 var female = document.getElementById('female').value;
-                var male = document.getElementById('female').value;;
-                var offended =document.getElementById('female').value;;
+                var male = document.getElementById('male').value;;
+                var offended =document.getElementById('notOffended').value;;
                
                 var fnameError = document.querySelector("#fnameError");
                 var lnameError = document.querySelector("#lnameError");
