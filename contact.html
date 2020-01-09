@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="styles/layout.css" type="text/css">
 
+
 </head>
 <body>
 <div class="wrapper row1">
@@ -35,22 +36,22 @@
 
 
 						<input type="text" id="firstname" name="name" placeholder="Your name">
-
+							<p class="error" id="fnameError"></p>
+								<div class="clear"></div>
 						<input type="text" id="lastname" name="lastname" placeholder="Your Last name">
+							<p class="error" id="lnameError">
 
+							</p><div class="clear"></div>
 						<input type="email" id="email" name="email adress" placeholder="Your email adress">
-
+							<p class="error" id="emailError"></p>
+								<div class="clear"></div>
 						<input type="password" id="password" name="password" placeholder="Choose a password">
-
+							<p class="error" id="passError"></p>
+								<div class="clear"></div>
 						<input type="password" id="cpassword" name="confirm password" placeholder="Confirm your password">
-						<p class="error" id="fnameError"></p>
-						<p class="error" id="lnameError"></p>
-						<p class="error" id="emailError"></p>
-						<p class="error" id="passError"></p>
-						<p class="error" id="cpassError"></p>
-						<p class="error" id="captchaError"></p>
-						<p class="error" id="genderError"></p>
-						<div class="clear"></div>
+							<p class="error" id="cpassError"></p>
+							<div class="clear"></div>
+						
 
 
 
@@ -66,25 +67,29 @@
 							
 							<tr>
 								<td>
-									<input type="radio" name="sex" id="female" value ="female">
+									<input type="radio" name="sex" id="fem" value ="female">
 								</td>
 								<td><label id="female" for="sex">Female</label> </td>
 							</tr>
 							<tr>
 								<td>
-									<input type="radio" name="sex" id="male" value ="male">
+									<input type="radio" name="sex" id="mal" value ="male">
 								</td>
 								<td><label id="male" for="sex">Male</label></td>
 							</tr>
 							<tr>
 								<td>
-									<input type="radio" name="sex" id="notOffended" value ="offended">
+									<input type="radio" name="sex" id="offended" value ="offended">
 							</td>
 							<td><label id="notOffended" for="sex">Prefer not to answer</label></td>
 							</tr>
 						</table>
+						<p class="error" id="captchaError"></p><div class="clear"></div>
+						<p class="error" id="genderError"></p><div class="clear"></div>
+						<!-- <div class="clear"></div> -->
+						<div class="clear"></div>
 						<input type="submit" id="signUp" value="Sign Up"/>
-
+						<div class="clear"></div>
 					</form>
 
 			<!-- / Section -->
@@ -116,9 +121,12 @@
           </div>
       </footer>
 </div>
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aes-js@3.1.2/index.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.4.1/dist/jquery.min.js,npm/particles.js@2.0.0/particles.min.js,npm/aes-js@3.1.2/index.min.js"></script>
+<script src="scripts/jq.js" type="text/javascript"></script>
 </body>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-<script src="scripts/jq.js" type="text/javascript"></script>
+
 </html>
